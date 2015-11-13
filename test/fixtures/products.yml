@@ -1,55 +1,20 @@
-require 'test_helper'
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-class ProductsControllerTest < ActionController::TestCase
-  setup do
-    @product = products(:one)
-    @update = {
-      title:       'Lorem Ipsum',
-      description: 'Wibbles are fun!',
-      image_url:   'lorem.jpg',
-      price:       19.95
-    }
-  end
+one:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:products)
-  end
+two:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
+ruby:
+  title: Programming Ruby 1.9
+  description: Ruby is the fastest growing ...
+  price: 49.50
+  image_url: ruby.png
 
-  test "should create product" do
-    assert_difference('Product.count') do
-      post :create, product: @update
-    end
-
-    assert_redirected_to product_path(assigns(:product))
-  end
-
-  test "should show product" do
-    get :show, id: @product
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @product
-    assert_response :success
-  end
-
-  test "should update product" do
-    patch :update, id: @product, product: @update
-    assert_redirected_to product_path(assigns(:product))
-  end
-
-  test "should destroy product" do
-    assert_difference('Product.count', -1) do
-      delete :destroy, id: @product
-    end
-
-    assert_redirected_to products_path
-  end
-end
