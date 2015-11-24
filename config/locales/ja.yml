@@ -1,0 +1,56 @@
+ja:
+  
+  activerecode:
+    models:
+      order:        "注文"
+    attributes:
+      order:        
+        name:       "名前"
+        address:    "住所"
+        email:      "メール"
+        pay_type:   "支払方法"
+    errors:
+      messages:
+        inclusion:  "no est&aacute; incluido en la lista"
+        blank:      "no puede quedar en blanco"
+
+  errors:
+    template:
+      body:         "Hay problemas con los siguientes campos:"
+      header:
+        one:        "1 error ha impedido que este %{model} se guarde"
+        other:      "%{count} errores han impedido que este %{model} se guarde"
+
+
+  layouts:
+    application:
+      title:      "プログラマティック　ブックシェルフ"
+      home:       "ホーム"
+      questions:  "質問"
+      news:       "ニュース"
+      contact:    "問い合わせ"
+
+  store:
+    index:
+      title_html: "あなたのカタログ"
+      add_html:        "カートに入れる"
+
+  number:
+    currency:
+      format:
+        unit:       "$"
+        precision:  2
+        separator:  "."
+        delimiter:  ","
+        format:     "%u%n"
+
+  orders:
+    new:
+      legend:           "Please Enter Your Details"
+    form:
+      name:             "名前"
+      address_html:     "住所"
+      email:            "メール"
+      pay_type:         "支払方法"
+      pay_prompt_html:  "支払方法をお選びください"
+      submit:           "注文する"
